@@ -17,8 +17,9 @@ while token[0] != 'q':
   if token[0] == 'q':
     break
     
-  num1 = token[1]
-  num2 = token[2]
+  num1 = int(token[1])
+  num2 = int(token[2])
+  num2expo = float(token[2])
 
   if token[0] == '+':
     print(add(num1, num2))
@@ -42,7 +43,7 @@ while token[0] != 'q':
     print(power(num1,num2))
 
   elif token[0] =="mod":
-    print(mod(num1,num2))        
-
-
-  
+    print(mod(num1,num2))
+    
+  elif token[0] =="expo":
+    print(expo(float(num1),num2expo))
